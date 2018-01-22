@@ -74,8 +74,7 @@
 			}
 			
 			.fixleft {
-				margin-left: 64px;
-				margin-top: 10px;
+				/*margin-left: 64px;*/
 			}
 			
 			.am-input-group-label {
@@ -95,6 +94,14 @@
 				background-color: #fefffe;
 				border-color: #409EFF;
 			}
+			
+			.callback-middle {
+				background-color: #f9f8f6;
+			}
+			
+			.am-input-group-label:first-child {
+				background-color: #f9f8f6;
+			}
 		</style>
 	</head>
 
@@ -113,7 +120,7 @@
 			<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
 
 			<div class="am-collapse am-topbar-collapse" id="topbar-collapse">
-
+                
 				<ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list tpl-header-list">
 					<li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
 						<a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
@@ -279,23 +286,19 @@
 					<div class="tpl-left-nav-list">
 						<ul class="tpl-left-nav-menu">
 							<li class="tpl-left-nav-item">
-<<<<<<< HEAD
-								<a href="javascript:;" class="nav-link tpl-left-nav-link-list ">
+
+								<a href="javascript:;" class="nav-link tpl-left-nav-link-list">
 									<i class="am-icon-gears" style="color: #3774AD;"></i>
-=======
-								<a href="javascript:;" class="nav-link tpl-left-nav-link-list  ">
-									<i class="am-icon-gears"style="color: #3774AD;"></i>
->>>>>>> ab8e6e2602fe4bb744344b523f7cdfce0b780f2b
+
 									<span>基本功能</span>
-									<i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+									<i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
 								</a>
-								<ul class="tpl-left-nav-sub-menu "style="display:block">
-									<li>
-<<<<<<< HEAD
-										<a href="table-font-list.html">
-=======
-										<a href="table-font-list.html" class="active" >
->>>>>>> ab8e6e2602fe4bb744344b523f7cdfce0b780f2b
+								<ul class="tpl-left-nav-sub-menu " style="display:block">
+
+									<a href="table-font-list.html">
+
+										<a href="table-font-list.html" class="active">
+
 											<i class="am-icon-file-text-o" style="color: #1283c8;"></i>
 											<span>文字回复</span>
 
@@ -336,8 +339,8 @@
 
 										</a>
 
-									</li>
-								</ul>
+							</li>
+							</ul>
 							</li>
 
 							<li class="tpl-left-nav-item">
@@ -871,20 +874,100 @@
 
 							</div>
 							<div class="row">
-								<div class="am-u-md-7">
+								 <div class="row">
+								<div class="am-u-md-8">
+									<div class="am-u-md-10 am-center">
+										<form class="am-form am-form-horizontal fixleft ">
+											<div class="am-form-group  am-form-icon am-form-feedback">
+												<div class="am-input-group">
+													<span class="am-input-group-label">请输入规则名称:</span>
+													<input type="text" class="am-form-field" placeholder="请输入规则名称">
+
+												</div>
+												<div class="" style="margin-left: 156px;margin-top: 5px;">
+													<ul>
+														<li><span><span style="color: red;font-weight: bold;">*</span>您可以给这条规则起一个名字, 方便下次修改和查看</span>
+														</li>
+														<li><span><span style="color: red;font-weight: bold;">*</span>选择高级设置: 将会提供一系列的高级选项供专业用户使用</span>
+														</li>
+													</ul>
+
+												</div>
+											</div>
+
+										</form>
+									</div>
+
+									<div class=" am-fl" id="upgrateOne">
+										<a class="nav-link tpl-left-nav-link-list" style="height: 38px;line-height: 38px;">
+											<span>高级设置</span>
+											<i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right "></i>
+										</a>
+									</div>
+									<script type="text/javascript" src="assets/js/jquery.min.js" ></script>
+									<script type="text/javascript">
+										$(document).ready(function() {
+											$("#upgrateOne").click(function() {
+												$("#upgrateOne_item").toggle("slow");
+											});
+										});
+									</script>
+								</div>
+
+								
+							</div>
+							<div class="row" id="upgrateOne_item" style="display: none;">
+								<div class="am-u-md-10  callback-middle ">
+									<form class="am-form am-form-horizontal fixleft " style="margin-left: 100px;">
+										<div class="am-form-group  am-form-icon am-form-feedback">
+											<div class="am-input-group">
+												<span class="am-input-group-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态:</span>
+												<div class="">
+													<label class="am-radio-inline">
+       													 <input type="radio"  value="" name="docInlineRadio">启动
+      												</label>
+													<label class="am-radio-inline">
+        													<input type="radio" name="docInlineRadio">禁用
+      												</label>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</form>
+									<form class="am-form am-form-horizontal fixleft " style="margin-left: 100px;">
+										<div class="am-form-group  am-form-icon am-form-feedback">
+											<div class="am-input-group">
+												<span class="am-input-group-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态:</span>
+												<div class="">
+													<label class="am-radio-inline">
+       													 <input type="radio"  value="" name="docInlineRadio">启动
+      												</label>
+													<label class="am-radio-inline">
+        													<input type="radio" name="docInlineRadio">禁用
+      												</label>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</form>
 									<form class="am-form am-form-horizontal fixleft ">
 										<div class="am-form-group  am-form-icon am-form-feedback">
 											<div class="am-input-group">
-												<span class="am-input-group-label">请输入规则名称:</span>
+												<span class="am-input-group-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优先级:</span>
 												<input type="text" class="am-form-field" placeholder="请输入规则名称">
 
 											</div>
 											<div class="" style="margin-left: 156px;margin-top: 5px;">
 												<ul>
-													<li><span><span style="color: red;font-weight: bold;">*</span>您可以给这条规则起一个名字, 方便下次修改和查看</span>
+													<li><span><span style="color: red;font-weight: bold;">*</span>规则优先级，越大则越靠前，最大不得超过254</span>
 													</li>
-													<li><span><span style="color: red;font-weight: bold;">*</span>选择高级设置: 将会提供一系列的高级选项供专业用户使用</span>
-													</li>
+
 												</ul>
 
 											</div>
@@ -894,9 +977,57 @@
 								</div>
 
 							</div>
+
+							</div>
+							<!--触发关键字-->
 							<div class="row">
-								<div class="am-u-md-7 ">
-									<form class="am-form am-form-horizontal fixleft "style="margin-left: 100px;">
+								 <div class="row">
+								<div class="am-u-md-8">
+									<div class="am-u-md-10 am-center">
+										<form class="am-form am-form-horizontal fixleft ">
+											<div class="am-form-group  am-form-icon am-form-feedback">
+												<div class="am-input-group">
+													<span class="am-input-group-label">触发关键字:</span>
+													<input type="text" class="am-form-field" placeholder="请输入规则名称">
+
+												</div>
+												<div class="" style="margin-left: 156px;margin-top: 5px;">
+													<ul>
+														<li><span><span style="color: red;font-weight: bold;">*</span>当用户的对话内容符合以上的关键字定义时，会触发这个回复定义</span>
+														</li>
+														<li><span><span style="color: red;font-weight: bold;">*</span>多个关键字请使用逗号隔开</span>
+														</li>
+														<li><span><span style="color: red;font-weight: bold;">*</span>选择高级触发: 将会提供一系列的高级触发方式供专业用户使用<span style="color: red;font-weight: bold;">(注意: 如果你不了解, 请不要使用)</span></span>
+														</li>
+													</ul>
+
+												</div>
+											</div>
+
+										</form>
+									</div>
+
+									<div class="am-fl" id="upgrateTwo">
+										<a class="nav-link tpl-left-nav-link-list" style="height: 38px;line-height: 38px;">
+											<span>高级设置</span>
+											<i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right "></i>
+										</a>
+									</div>
+									<script type="text/javascript" src="assets/js/jquery.min.js" ></script>
+									<script type="text/javascript">
+										$(document).ready(function() {
+											$("#upgrateTwo").click(function() {
+												$("#upgrateTwo_item").toggle("slow");
+											});
+										});
+									</script>
+								</div>
+
+								
+							</div>
+							<div class="row" id="upgrateTwo_item" style="display: none;">
+								<div class="am-u-md-10  callback-middle ">
+									<form class="am-form am-form-horizontal fixleft " style="margin-left: 100px;">
 										<div class="am-form-group  am-form-icon am-form-feedback">
 											<div class="am-input-group">
 												<span class="am-input-group-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态:</span>
@@ -907,15 +1038,15 @@
 													<label class="am-radio-inline">
         													<input type="radio" name="docInlineRadio">禁用
       												</label>
-													
+
 												</div>
 
 											</div>
-											
+
 										</div>
-										
+
 									</form>
-									<form class="am-form am-form-horizontal fixleft "style="margin-left: 100px;">
+									<form class="am-form am-form-horizontal fixleft " style="margin-left: 100px;">
 										<div class="am-form-group  am-form-icon am-form-feedback">
 											<div class="am-input-group">
 												<span class="am-input-group-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态:</span>
@@ -926,26 +1057,26 @@
 													<label class="am-radio-inline">
         													<input type="radio" name="docInlineRadio">禁用
       												</label>
-													
+
 												</div>
 
 											</div>
-											
+
 										</div>
-										
+
 									</form>
 									<form class="am-form am-form-horizontal fixleft ">
 										<div class="am-form-group  am-form-icon am-form-feedback">
 											<div class="am-input-group">
-												<span class="am-input-group-label">请输入规则名称:</span>
+												<span class="am-input-group-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优先级:</span>
 												<input type="text" class="am-form-field" placeholder="请输入规则名称">
 
 											</div>
 											<div class="" style="margin-left: 156px;margin-top: 5px;">
 												<ul>
-													<li><span><span style="color: red;font-weight: bold;">*</span>您可以给这条规则起一个名字, 方便下次修改和查看</span>
+													<li><span><span style="color: red;font-weight: bold;">*</span>规则优先级，越大则越靠前，最大不得超过254</span>
 													</li>
-													
+
 												</ul>
 
 											</div>
@@ -956,6 +1087,9 @@
 
 							</div>
 
+							</div>
+						
+							<!--触发关键字-->
 						</div>
 
 					</div>
@@ -969,6 +1103,7 @@
 		<script src="assets/js/amazeui.min.js"></script>
 		<script src="assets/js/iscroll.js"></script>
 		<script src="assets/js/app.js"></script>
+
 	</body>
 
 </html>

@@ -2,7 +2,7 @@
 
 html,
 body {
-    background: #e9ecf3;
+    background: #f3f3f3;
     overflow: inherit;
 }
 
@@ -292,7 +292,7 @@ ul.tpl-dropdown-content li>a.tpl-dropdown-content-message:last-child {
     vertical-align: middle;
     margin-top: -5px;
     padding-left: 18px;
-    width: 160px;
+    width: 210px;
 }
 
 .tpl-logo img {
@@ -485,7 +485,7 @@ ul.tpl-dropdown-content li>a.tpl-dropdown-content-message:last-child {
     border-radius: 6px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     /*padding-bottom: 20px;*/
-   margin-top: 20px;
+   margin-top: 10px;
 }
 
 .tpl-left-nav-title {
